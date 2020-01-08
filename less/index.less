@@ -55,6 +55,7 @@ table {
 
 html, body {
 	height: 100%;
+	width: 99vw;
 	font-size: 62.5%;
 	font-family: Bree Serif, sans-serif;
 }
@@ -65,22 +66,32 @@ html, body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 7.5rem;
+	height: 5rem;
 	width: 100vw;
-	background-color: red;
+	background-color: #000050;
 	color: white;
 	z-index: 500;
+	border-bottom: .2rem ridge khaki;
 	nav{
 		height: 100%;
 		width: 50%;
-		background-color: green;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
 		a{
 			font-size: 2rem;
 			text-decoration: none;
+			line-height: 3.7rem;
 			color: white;
+			height: 85%;
+			padding: 0 1rem;
+			border-radius: .3rem;
+			background-color: transparent;
+			transition: background-color 1s, color 1s;
+			&:hover{
+				background-color: khaki;
+				color: white;
+			}
 		}
 	}
 }
@@ -88,53 +99,88 @@ html, body {
 .Intro{
 	position: relative;
 	display: flex;
-	flex-direction: column;
+	// flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	width: 100vw;
+	color: #000050;
 	.picture-container{
-		height: 30rem;
-		width: auto;
-		margin-top: 10rem;
+		height: 80%;
+		width: 59%;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
 		img{
-			height: 100%;
+			height: 60%;
 			width: auto;
-			border-radius: 5rem;
+			border-radius: 15rem;
 		}
-	}
-	.name{
-		font-size: 4rem;
-		margin: 1.5rem 0 1rem;
-	}
-	.roles{
-		font-size: 1.75rem;		
+		.header-container{
+			height: 65%;
+			width: 49%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.name{
+				font-size: 3rem;
+				margin: 2.5rem 0 1rem;
+			}
+			.roles{
+				font-size: 1.5rem;		
+			}
+		}
+
 	}
 
 	.cta-container{
 		position: relative;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		height: 20%;
-		width: 100%;
-		background-color: grey;
-		margin-top: 4rem;
+		height: 80%;
+		width: 39%;
+		margin-top: 7rem;
 		.work-with-me-text{
-			font-size: 2.25rem;
+			height: 3rem;
+			width: 75%;
+			font-size: 2rem;
+			text-align: center;
+			margin-bottom: 2.5rem;
 		}
 	}
-	background-color: rgba(grey, .5);
+	.Intro-divider{
+		margin-top: 4rem;
+		height: 75%;
+		width: .3rem;
+		border: .15rem groove rgba(#000050, .75);
+		border-radius: 1rem;
+	}
+	background-color: rgba(#F0F0F0, .5);
 }
 
 .button{
 	height: 5rem;
 	width: 20rem;
+	background-color: transparent;
+	color: #000050;
+	font-weight: bold;
+	border-radius: .5rem;
+	border: .2rem ridge #000050;
+	transition: transform 1s, background-color 1s, color 1s, border 1s;
+	&:hover{
+		cursor: pointer;
+		transform: rotate(360deg);
+		background-color: #000050;
+		color: khaki;
+		border: .2rem ridge khaki;
+	}
 }
 
 .Intro, .about, .work, .contact{
 	position: relative;
+	display: flex;
 	height: 100vh;
 	width: 100vw;
 }
@@ -142,34 +188,118 @@ html, body {
 .about{
 	display: flex;
 	align-items: center;
+	color: #000050;
 	&-container{
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 60%;
+		height: 70%;
 		width: 49%;
 		.introduction-header, .skills-header{
-			font-size: 4rem;
+			font-size: 6rem;
 			margin: 2rem 0;
 		}
 		.introduction-info, .skills-list-container{
-			font-size: 1.6rem;
-			align-self: flex-start;
+			height: 100%;
+			width: 75%;
+			font-size: 2.25rem;
+			align-self: center;
+			justify-content: space-evenly;
 			margin: 2rem;
 		}
 		.skills-list-container{
-			height: 60%;
+			height: 70%;
 			width: 65%;
 			display: flex;
 			flex-flow: column wrap;
 			align-self: center;
-			p{
+			.skill{
 				margin: .5rem 0;
 				padding: .5rem;
+				width: 30%;
 			}
 		}
 	}
-	background-color: rgba(grey, .25);
+	.about-divider{
+		height: 75%;
+		width: .2rem;
+		border: .1rem ridge #000050;
+	}
+	background-color: rgba(khaki, .5);
 }
+
+.work{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.work-header{
+		font-size: 6rem;
+		margin: 0 0 5rem;
+		height: 5rem;
+		width: 80%;
+		text-align: center;
+	}
+
+	.work-categories{
+		border-bottom: .1rem solid black;
+			background-color: #000050;
+			color: white;
+	}
+	.history-container{
+		position: relative;
+		display: flex;
+		justify-content: space-evenly;
+		height: 5rem;
+		width: 90%;
+		border-top: .2rem solid black;
+		border-bottom: .2rem solid black;
+		&:nth-child(3), &:nth-child(4){
+			border-top: .1rem solid black;
+			border-bottom: .1rem solid black;
+			&:hover{
+				cursor: pointer;
+				background-color: khaki;
+			}
+		}
+		&:nth-child(5){
+			border-top: .1rem solid black;
+			border-bottom: .15rem solid black;
+			&:hover{
+				cursor: pointer;
+				background-color: khaki;
+			}
+		}
+		.company, .employmentTime, .title, .techUsed{
+			height: 90%;
+			width: 24%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.6rem;
+
+		} 
+	}
+}
+.contact{
+	flex-direction: column;
+	justify-content: center;
+	.form-header{
+		height: 6rem;
+		font-size: 6rem;
+		margin: 2rem 0;
+		text-align: center;
+	}
+	.contact-form{
+		display: flex;
+		flex-direction: column;
+		height: 75%;
+		width: 50%;
+		justify-self: center;
+		align-self: center;
+	}
+	background-color: rgba(khaki, .5);
+}
+
+
 
