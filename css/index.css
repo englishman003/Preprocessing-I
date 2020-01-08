@@ -281,7 +281,7 @@ body {
 .about-container .skills-list-container {
   height: 100%;
   width: 75%;
-  font-size: 2.25rem;
+  font-size: 2rem;
   align-self: center;
   justify-content: space-evenly;
   margin: 2rem;
@@ -361,6 +361,7 @@ body {
 .contact {
   flex-direction: column;
   justify-content: center;
+  color: #000050;
   background-color: rgba(240, 230, 140, 0.5);
 }
 .contact .form-header {
@@ -376,4 +377,60 @@ body {
   width: 50%;
   justify-self: center;
   align-self: center;
+}
+.contact .contact-form label {
+  font-size: 2.4rem;
+  transform: translate(1rem, -3.75rem);
+  transition: transform 0.5s;
+}
+.contact .contact-form #message-label {
+  transform: translate(0.85rem, -24.75rem) scale(0.75);
+  transform-origin: left;
+}
+.contact .contact-form #name,
+.contact .contact-form #email,
+.contact .contact-form #message {
+  background-color: #efe481;
+  border: 0.2rem inset #efe481;
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.contact .contact-form #name:focus,
+.contact .contact-form #email:focus,
+.contact .contact-form #message:focus {
+  background-color: #000050;
+  border: 0.2rem inset white;
+  color: khaki;
+  outline: none;
+}
+.contact .contact-form #name::placeholder,
+.contact .contact-form #email::placeholder,
+.contact .contact-form #message::placeholder {
+  color: khaki;
+}
+.contact .contact-form #name,
+.contact .contact-form #email {
+  height: 4rem;
+}
+.contact .contact-form #name:focus::-webkit-input-placeholder,
+.contact .contact-form #email:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+.contact .contact-form #name:not(:placeholder-shown) + label,
+.contact .contact-form #email:not(:placeholder-shown) + label,
+.contact .contact-form #name:focus + label,
+.contact .contact-form #email:focus + label {
+  transform: translate(-9rem, -7.25rem) scale(0.75);
+  cursor: pointer;
+}
+.contact .contact-form ::-webkit-input-placeholder {
+  opacity: 0;
+}
+.contact .contact-form #message {
+  resize: none;
+}
+.contact .button-container {
+  display: flex;
+  justify-content: space-evenly;
 }

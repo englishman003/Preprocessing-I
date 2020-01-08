@@ -203,7 +203,7 @@ html, body {
 		.introduction-info, .skills-list-container{
 			height: 100%;
 			width: 75%;
-			font-size: 2.25rem;
+			font-size: 2rem;
 			align-self: center;
 			justify-content: space-evenly;
 			margin: 2rem;
@@ -284,6 +284,7 @@ html, body {
 .contact{
 	flex-direction: column;
 	justify-content: center;
+	color: #000050;
 	.form-header{
 		height: 6rem;
 		font-size: 6rem;
@@ -297,6 +298,57 @@ html, body {
 		width: 50%;
 		justify-self: center;
 		align-self: center;
+
+		label{
+			font-size: 2.4rem;
+			transform: translate(1rem, -3.75rem);
+			transition: transform .5s;
+		}
+		
+		#message-label{
+			transform: translate(.85rem, -24.75rem) scale(.75);
+			transform-origin: left;
+		}
+
+		#name, #email, #message{
+			background-color: darken(khaki, 2.5%);
+			border: .2rem inset darken(khaki, 2.5%);
+			margin: .5rem 0;
+			font-size: 2rem;
+			padding: 1rem;
+			&:focus{
+				background-color: #000050;
+				border: .2rem inset white;
+				color: khaki;
+				outline: none;
+			}
+			&::placeholder{
+				color: khaki;
+			}
+		}
+		#name, #email{
+			height: 4rem;
+			&:focus::-webkit-input-placeholder {
+				opacity: 1;
+			  }
+			  &:not(:placeholder-shown) + label,
+				&:focus + label {
+				transform: translate(-9rem, -7.25rem) scale(.75);
+				cursor: pointer;
+				}
+			}
+		::-webkit-input-placeholder{
+			opacity: 0;
+		}
+
+		#message{
+			resize: none;
+		}
+
+	}
+	.button-container{
+		display: flex;
+		justify-content: space-evenly;
 	}
 	background-color: rgba(khaki, .5);
 }
