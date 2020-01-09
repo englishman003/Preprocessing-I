@@ -14,6 +14,101 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+<header class="main-header">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About Me</a>
+    <a href="#">Work History</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+  <section class="Intro" id="Home">
+
+    <div class="picture-container">
+        <img src="/img/me.png" alt="Nathan Cluff" class="personal-picture">
+        <div class="header-container">
+          <h1 class="name">Nathan Cluff &mdash; Web Developer</h1>
+          <h3 class="roles">Husband | Father | Sports Fan | Tech Nerd | Foodie</h3>
+        </div>
+    </div>
+    <div class="Intro-divider"></div>
+    <section class="cta-container">
+        <p class="work-with-me-text">Programming fun into my life one moment at a time.  Let's have some fun!</p>
+        <button class="button button-workCTA" value="work">Let's Have Some Fun!</button>
+    </section>
+  </section>
+  <section class="about" id="About">
+    <section class="about-container introduction">
+        <h2 class="introduction-header">Hey you! Yeah you!...</h2>
+          <p class="introduction-info"> Let's cut to the chase here. Programmers and consumers both love certain things.  Websites that are both good looking and reliable.  How that happens is through clean, consistent, and reliable code which not only gets the job done, but also brings a bit of flair.  Not only that, but the best choice in technology must be used.  That is where I come in.  Those are my ideals that I strive for in all of the projects I do.
+            <br>
+            <br>
+            As for my personal life. I love my wife and daughter, and have another child expected later this year.  BYU and Texas Tech are my favorite college teams.  The Kansas City Chiefs, Los Angeles Lakers, and Utah Jazz are the favorite football and basketball teams professionally.  I love to cook and try new recipes, with Indian being my absolute favorite. Also, I do love to play with technology, which includes programming and graphic design for projects of my own.
+           </p>
+    </section>
+    <div class="about-divider"></div>
+    <section class="about-container skills">
+      <h2 class="skills-header">Skills I Have</h2>
+      <div class="skills-list-container">
+        <p class="skill">HTML5</p>
+        <p class="skill">CSS3</p>
+        <p class="skill">SCSS</p>
+        <p class="skill">Less</p>
+        <p class="skill">JavaScript</p>
+        <p class="skill">Responsive Design</p>
+        <p class="skill">Flexbox</p>
+        <p class="skill">jQuery</p>
+        <p class="skill">CSS Grids</p>
+        <p class="skill">Inkscape</p>
+        <p class="skill">Illustrator</p>
+        <p class="skill">Photoshop</p>
+      </div>
+    </section>
+  </section>
+  <section class="work" id="Work">
+    <h2 class="work-header">My Work History</h2>
+    <div class="history-container work-categories">
+      <div class="company">Company</div> 
+      <div class="title">Title</div> 
+      <div class="employmentTime">Time Of Employment</div> 
+      <div class="techUsed">Technology Used</div> 
+    </div>
+    <div class="history-container">
+      <div class="company">Microsoft</div> 
+      <div class="title">Software Developer</div> 
+      <div class="employmentTime">October 2026 - Present</div> 
+      <div class="techUsed">HTML5, CSS3, JavaScript</div> 
+    </div>
+    <div class="history-container">
+      <div class="company">NBA - Los Angeles Lakers</div> 
+      <div class="title">Analytics Site Developer</div> 
+      <div class="employmentTime">October 2023 - October 2026</div> 
+      <div class="techUsed">Node.JS</div> 
+    </div>
+    <div class="history-container">
+      <div class="company">Kuru Footwear</div> 
+      <div class="title">Front End Developer</div> 
+      <div class="employmentTime">October 2020 - October 2023</div> 
+      <div class="techUsed">Node.JS</div> 
+    </div>
+  </section>
+  <section class="contact" id="Contact">
+    <header class="form-header">Contact Me!</header>
+    <form action="" class="contact-form">
+      <input type="text" name="name" id="name" placeholder="Enter Full Name">
+      <label for="name" id="name-label">Full Name</label>
+      <input type="email" name="email" id="email" placeholder="Enter Your Email">
+      <label for="email" id="email-label">Email</label>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Drop me a line! :)"></textarea>
+      <label for="message" id="message-label">Drop Us A Line</label>
+      <div class="button-container">
+        <button class="button button-cancel" value="cancel">Cancel</button>
+        <button class="button button-reset" value="reset">Reset</button>
+        <button class="button button-submit" value="submit">Submit</button>
+      </div>
+
+    </form>
+  </section>
 </body>
 </html>
